@@ -1,0 +1,47 @@
+{
+  "project_info": {
+    "project_number": "851484123579",
+    "firebase_url": "https://relations-2ea0e-default-rtdb.europe-west1.firebasedatabase.app",
+    "project_id": "relations-2ea0e",
+    "storage_bucket": "relations-2ea0e.appspot.com"
+  },
+  "client": [
+    {
+      "client_info": {
+        "mobilesdk_app_id": "1:851484123579:android:a9ec3df946dd7e3a61649e",
+        "android_client_info": {
+          "package_name": "com.example.relations"
+        }
+      },
+      "oauth_client": [
+        {
+          "client_id": "851484123579-mcipkrc7qbadr2l33r36ra44d5p43jud.apps.googleusercontent.com",
+          "client_type": 3
+        }
+      ],
+      "api_key": [
+        {
+          "current_key": "AIzaSyDWd-JvsYiX05knYquteK1s3ojPEnYK5rI"
+        }
+      ],
+      "services": {
+        "appinvite_service": {
+          "other_platform_oauth_client": [
+            {
+              "client_id": "851484123579-mcipkrc7qbadr2l33r36ra44d5p43jud.apps.googleusercontent.com",
+              "client_type": 3
+            },
+            {
+              "client_id": "851484123579-b53k9i03ou3c9pp4g4j6q4d517ql6ldr.apps.googleusercontent.com",
+              "client_type": 2,
+              "ios_info": {
+                "bundle_id": "com.example.relations"
+              }
+            }
+          ]
+        }
+      }
+    }
+  ],
+  "configuration_version": "1"
+}
