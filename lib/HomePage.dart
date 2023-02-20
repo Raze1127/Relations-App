@@ -399,11 +399,19 @@ class _MyContactsState extends State<MyContacts>  with TickerProviderStateMixin{
     if (relation.value.toString() == "1") {
       final relat =
       await ref.child('Relations/${snapshot.value.toString()}/photo2').get();
-      return relat.value.toString();
+      if(relat.value.toString() == "null"){
+        return 'https://cdn-icons-png.flaticon.com/512/4054/4054617.png';
+      }else{
+        return relat.value.toString();
+      }
     } else {
       final relat =
       await ref.child('Relations/${snapshot.value.toString()}/photo1').get();
-      return relat.value.toString();
+      if(relat.value.toString() == "null"){
+        return 'https://cdn-icons-png.flaticon.com/512/4054/4054617.png';
+      }else{
+        return relat.value.toString();
+      }
     }
   }
 
@@ -445,24 +453,29 @@ class _MyContactsState extends State<MyContacts>  with TickerProviderStateMixin{
                           mainAxisSize: MainAxisSize.max,
                           crossAxisAlignment: CrossAxisAlignment.start,
                           children: [
+
                             Expanded(
-                              child: Padding(
-                                padding: const EdgeInsetsDirectional.fromSTEB(
-                                    5, 0, 0, 0),
-                                child: Container(
-                                  width: 100,
-                                  height: 100,
-                                  clipBehavior: Clip.antiAlias,
-                                  decoration: const BoxDecoration(
-                                    shape: BoxShape.circle,
+                              child: Align(
+                                alignment: const AlignmentDirectional(0, 0),
+                                child: Padding(
+                                  padding: const EdgeInsetsDirectional.fromSTEB(
+                                      0, 0, 5, 0),
+                                  child: Container(
+                                      width: 100,
+                                      height: 100,
+                                      clipBehavior: Clip.antiAlias,
+                                      decoration: const BoxDecoration(
+                                        shape: BoxShape.circle,
+                                      ),
+                                      child: GestureDetector(
+                                        onTap: imgFromGallery,
+                                        child: FadeInImage.memoryNetwork(
+                                          image: snapshot.data![1].toString(),
+                                          fit: BoxFit.cover,
+                                          placeholder: kTransparentImage,
+                                        ),
+                                      )
                                   ),
-                                  child: GestureDetector(
-                                    child: FadeInImage.memoryNetwork(
-                                      image: snapshot.data![1].toString(),
-                                      fit: BoxFit.cover,
-                                      placeholder: kTransparentImage,
-                                    ),
-                                  )
                                 ),
                               ),
                             ),

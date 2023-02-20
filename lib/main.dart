@@ -2,11 +2,12 @@ import 'package:firebase_auth/firebase_auth.dart';
 import 'package:firebase_core/firebase_core.dart';
 import 'package:firebase_database/firebase_database.dart';
 import 'package:flutter/material.dart';
-import 'package:relations/HomePage.dart';
-import 'package:relations/login.dart';
-import 'package:relations/register.dart';
+import 'HomePage.dart';
 import 'creationRelations.dart';
 import 'firebase_options.dart';
+import 'loading.dart';
+import 'login.dart';
+import 'register.dart';
 
 
 void main() async{
@@ -63,7 +64,7 @@ class mainPage extends StatelessWidget{
                   return const CreationRelation();
                 }
               } else {
-                return const MyLogin();
+                return const MyLoading();
               }
             },
           );
