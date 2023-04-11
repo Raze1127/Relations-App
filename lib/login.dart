@@ -129,7 +129,13 @@ class _MyLoginState extends State<MyLogin> {
                         ),
                       ),
                       TextButton(
-                        onPressed: () {},
+                        onPressed: () async {
+                          await FirebaseAuth.instance
+                              .sendPasswordResetEmail(email: emailController.text.trim());
+                          ScaffoldMessenger.of(context).showSnackBar(
+                              const SnackBar(
+                                content: Text("Вам на email, который вы ввели в поле выше выслано письмо с ссылкой на восстановление"),));
+                        },
                         child: const Text(
                           'Забыли пароль?',
                           style: TextStyle(

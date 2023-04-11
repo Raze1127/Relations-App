@@ -3,7 +3,6 @@ import 'package:flutter/material.dart';
 import "package:firebase_database/firebase_database.dart";
 import 'package:flutter_datetime_picker/flutter_datetime_picker.dart';
 import 'package:intl/intl.dart';
-import 'package:nanoid/nanoid.dart';
 import 'package:flutter/services.dart';
 
 class CreationRelation extends StatefulWidget {

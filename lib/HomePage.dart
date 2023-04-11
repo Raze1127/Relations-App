@@ -7,7 +7,7 @@ import 'package:firebase_messaging/firebase_messaging.dart';
 import 'package:firebase_storage/firebase_storage.dart' as firebase_storage;
 import 'package:firebase_auth/firebase_auth.dart';
 import 'package:flutter/material.dart';
-import 'package:flutter_gifimage/flutter_gifimage.dart';
+import 'package:flutter_gif/flutter_gif.dart';
 import 'package:flutter_map/flutter_map.dart';
 import 'package:flutter_native_image/flutter_native_image.dart';
 import 'package:google_nav_bar/google_nav_bar.dart';
@@ -729,9 +729,9 @@ class _MyContactsState extends State<MyContacts> with TickerProviderStateMixin {
           ]),
           builder:
               (BuildContext context, AsyncSnapshot<List<String>> snapshot) {
-            GifController controllerCry = GifController(vsync: this);
-            GifController controller18 = GifController(vsync: this);
-            GifController controllerBell = GifController(vsync: this);
+            FlutterGifController controllerCry = FlutterGifController(vsync: this);
+            FlutterGifController controller18 = FlutterGifController(vsync: this);
+            FlutterGifController controllerBell = FlutterGifController(vsync: this);
 
             controllerBell.value = 1;
             controller18.value = 1;
